@@ -1,11 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p><%= message %></p>
-  </body>
-</html>
+<%- include('partials/header') %>
+    <main>
+      <div class="card 
+      rounded 
+      text-white 
+      d-flex 
+      vh-50 
+      mx-auto"
+      style="height: auto; width: 600px">
+        <div class="card-body">
+          <div class="d-flex align-items-center">
+            <div class="vr mx-3 opacity-100" style="width: 4px"></div>
+            <h1 class="card-title fw-bold mb-0 me-3"><%= title %></h1>
+          </div>
+          <hr class="border-2 opacity-50" style="color: #420008">
+          <p class="card-text"><%= translatedMessage %></p>
+          <div class="translation-section mt-4">
+            <p class="fw-bold">Versão Original:</p>
+            <p class="card-text mt-1"><%= originalMessage %></p>
+          </div>
+          <button class="button rounded btn mt-4 text-white gap-2" type="button" onclick="window.location.reload();">Próxima frase
+          </button>
+        </div>
+      </div>
+    </main>
+<%- include('partials/footer') %>
